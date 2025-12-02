@@ -1,0 +1,31 @@
+name:		adventOfCode2025
+version: 	1.0
+cabal-version:	>= 1.6
+description: 	Advent of Code Compilation
+license: 	AllRightsReserved
+license-file: 	LICENSE
+copyright:
+author:		Raul Gutierrez
+maintainer: 	raguti@upv.es
+build-type: 	Simple
+stability:
+homepage:
+package-url:
+synopsis:
+category:
+tested-with:
+source-repository head
+  type:     git
+  location: https://github.com/raulgut/advent-of-code-2025.git
+
+Executable day01p1
+  buildable: True
+  main-is: day01p1.hs
+  build-depends: base
+  hs-source-dirs: src
+
+Executable day01p2
+  buildable: True
+  main-is: day01p2.hs
+  build-depends: base
+  hs-source-dirs: src
