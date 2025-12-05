@@ -29,3 +29,39 @@ Executable day01p2
   main-is: day01p2.hs
   build-depends: base
   hs-source-dirs: src
+
+Executable day02p1
+  buildable: True
+  main-is: day02p1.hs
+  build-depends: base, text
+  hs-source-dirs: src
+
+Executable day02p2
+  buildable: True
+  main-is: day02p2.hs
+  build-depends: base, text
+  hs-source-dirs: src
+
+Executable day03p1
+  buildable: True
+  main-is: day03p1.hs
+  build-depends: base
+  hs-source-dirs: src
+
+Executable day03p2
+  buildable: True
+  main-is: day03p2.hs
+  build-depends: base
+  hs-source-dirs: src
+
+Executable day04p1
+  buildable: True
+  main-is: day04p1.hs
+  build-depends: base, containers
+  hs-source-dirs: src
+
+Executable day04p2
+  buildable: True
+  main-is: day04p2.hs
+  build-depends: base, containers
+  hs-source-dirs: src

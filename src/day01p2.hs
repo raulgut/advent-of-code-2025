@@ -38,6 +38,7 @@ toInstruction ('L':xs) = Instruction L (read xs)
 toInstruction ('R':xs) = Instruction R (read xs)
 toInstruction str = error $ "Instruction " ++ str ++ " not allowed."
 
+-- | Process the instructions and returns the number of times that 0 clicks
 process :: State -> [Instruction] -> Int
 process st [] = if (position st == 0) then (zeroVisits st) + 1 else zeroVisits st
 process st ((Instruction L value):is)
