@@ -4,7 +4,7 @@
 -----------------------------------------------------------------------------
 
 import System.Environment (getArgs)
-import Data.Set as S (Set, fromList)
+import Data.Set as S (Set, fromList, filter)
 -----------------------------------------------------------------------------
 -- Data
 -----------------------------------------------------------------------------
@@ -13,8 +13,8 @@ import Data.Set as S (Set, fromList)
 main = do
   args <- getArgs
   input <- readFile . head $ args
-  let spaceList = getRolls 0 0 . Prelude.map (filter (/= '\r')) . lines $ input
-  putStrLn . show . length . filter (accessible (fromList spaceList)) $ spaceList
+  let space = fromList . getRolls 0 0 . Prelude.map (filter (/= '\r')) . lines $ input
+  putStrLn . show . length . filter (accessible space) $ space
 
 getRolls :: Int -> Int -> [String] -> [(Int,Int)]
 getRolls _ _ [] = []
@@ -24,6 +24,6 @@ getRolls y x (('@':es):rs) = (x,y):(getRolls y (x + 1) (es:rs))
 getRolls y x (('.':es):rs) = (getRolls y (x + 1) (es:rs))
 
 accessible :: Set (Int, Int) -> (Int,Int) -> Bool
-accessible spaceSet (x,y)
+accessible space (x,y)
   = let neighbors = [(x - 1, y - 1), (x, y - 1), (x + 1, y - 1), (x - 1, y), (x + 1, y), (x - 1, y + 1),  (x, y + 1), (x + 1, y + 1)]
-    in (<4) . length . filter (==True) . map (\x -> elem x spaceSet) $ neighbors
+    in (<4) . length . filter (==True) . map (\x -> elem x space) $ neighbors

@@ -65,3 +65,27 @@ Executable day04p2
   main-is: day04p2.hs
   build-depends: base, containers
   hs-source-dirs: src
+
+Executable day05p1
+  buildable: True
+  main-is: day05p1.hs
+  build-depends: base, parsec
+  hs-source-dirs: src
+
+Executable day05p2
+  buildable: True
+  main-is: day05p2.hs
+  build-depends: base, parsec
+  hs-source-dirs: src
+
+Executable day06p1
+  buildable: True
+  main-is: day06p1.hs
+  build-depends: base, parsec
+  hs-source-dirs: src
+
+Executable day06p2
+  buildable: True
+  main-is: day06p2.hs
+  build-depends: base, parsec
+  hs-source-dirs: src
