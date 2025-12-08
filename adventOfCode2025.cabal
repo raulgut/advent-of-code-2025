@@ -101,3 +101,15 @@ Executable day07p2
   main-is: day07p2.hs
   build-depends: base, mtl
   hs-source-dirs: src
+
+Executable day08p1
+  buildable: True
+  main-is: day08p1.hs
+  build-depends: base
+  hs-source-dirs: src
+
+Executable day08p2
+  buildable: True
+  main-is: day08p2.hs
+  build-depends: base
+  hs-source-dirs: src
