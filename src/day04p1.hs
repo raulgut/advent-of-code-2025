@@ -5,8 +5,9 @@
 
 import System.Environment (getArgs)
 import Data.Set as S (Set, fromList, filter)
+
 -----------------------------------------------------------------------------
--- Data
+-- Functions
 -----------------------------------------------------------------------------
 
 -- | Main

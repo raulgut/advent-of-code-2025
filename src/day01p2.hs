@@ -25,6 +25,11 @@ data Instruction
 data State = State { position :: Int
                    , zeroVisits :: Int
                    }
+
+-----------------------------------------------------------------------------
+-- Functions
+-----------------------------------------------------------------------------
+
 -- | Main
 main = do
   args <- getArgs
